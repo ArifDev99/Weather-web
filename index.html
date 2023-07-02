@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather Dashboard</title>
+    <!--Bootstrap CSS CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=El+Messiri:wght@400;500;600;700&family=Roboto+Slab:wght@100;500;600;700;800;900&family=Signika:wght@300;400;500;600;700&family=Staatliches&family=Yeseva+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Jumbotron for Title-->
+    <div id="main">
+        <img class="bgimg position-absolute opacity-25" id="Bg_img"  alt="">
+        <div class=" container-fluid text-center p-2 position-relative  text-light mb-3" style="background-color: #00000036;">
+            <h1> <strong>Weather Dashboard</strong></h1>
+        </div>
+        <div class="container position-relative">
+            <!--Row for searching a city-->
+            <div class="row border border-light" style="background-color: #d5d3d336;">
+                <div class="col-sm-8">
+                    <div class="row p-4 rounded">
+                        <div class="col-sm-12 d-flex p-0 flex-column text-light" id="current-weather">
+                            
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1.2rem" fill="currentColor" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                                    <h4 class="city-name bolder m-0 px-2" id="current-city"></h4>
+                                </div>
+                                
+                                <h1 id="hero_temperature" class="font-weight-bold m-0"></h1>
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="1.2rem" fill="currentColor" viewBox="0 0 448 512"><path d="M96 32V64H48C21.5 64 0 85.5 0 112v48H448V112c0-26.5-21.5-48-48-48H352V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V64H160V32c0-17.7-14.3-32-32-32S96 14.3 96 32zM448 192H0V464c0 26.5 21.5 48 48 48H400c26.5 0 48-21.5 48-48V192z"/></svg>
+                                    <h4 class="date bolder m-0 px-2" id="today_date"></h4>
+                                </div>
+                            </div>
+
+                            <div class="m-auto" >
+                                <div class="mr-5 text-center">
+
+                                    <h5 class="city-name" id="desc"></h5>
+                                    <p>Temperature:<span class="current" id="temperature"></span> / <span class="current" id="temperature2"></span></p>
+                                    <p>Humidity:<span class="current" id="humidity"></span></p> 
+                                    <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                                    <p>UV index:<span class="current bg-danger rounded py-2 px-2 text-white" id="uv-index"></span></p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Row for future data to be dumped here-->
+                    <div class="col-sm-12" id ="future-weather">
+                        <h3 class="text-light">5-Day Forecast:</h3>
+                        <div class="row text-light w-100">
+                            <div class="col-sm-2 border border-light forecast text-white ml-2 mb-3 p-2 mt-2 rounded" style="background-color: #d5d3d336;">
+                                <p id="fDate0"></p>
+                                <p id="fImg0"></p>
+                                <p>Temp:<span id="fTemp0"></span></p>
+                                <p>Humidity:<span id="fHumidity0"></span></p>
+                            </div>
+                            <div class="col-sm-2 border border-light forecast text-white ml-2 mb-3 p-2 mt-2 rounded" style="background-color: #d5d3d336;">
+                                <p id="fDate1"></p>
+                                <p id="fImg1"></p>
+                                <p>Temp:<span id="fTemp1"></span></p>
+                                <p>Humidity:<span id="fHumidity1"></span></p>
+                            </div>
+                            <div class="col-sm-2 border border-light forecast text-white ml-2 mb-3 p-2 mt-2 rounded"style="background-color: #d5d3d336;">
+                                <p id="fDate2"></p>
+                                <p id="fImg2"></p>
+                                <p>Temp:<span id="fTemp2"></span></p>
+                                <p>Humidity:<span id="fHumidity2"></span></p>
+                            </div>
+                            <div class="col-sm-2 border border-light forecast text-white ml-2 mb-3 p-2 mt-2 rounded"style="background-color: #d5d3d336;">
+                                <p id="fDate3"></p>
+                                <p id="fImg3"></p>
+                                <p>Temp:<span id="fTemp3"></span></p>
+                                <p>Humidity:<span id="fHumidity3"></span></p>
+                            </div>
+                            <div class="col-sm-2 border border-light forecast text-white ml-2 mb-3 p-2 mt-2 rounded" style="background-color: #d5d3d336;">
+                                <p id="fDate4"></p>
+                                <p id="fImg4"></p>
+                                <p>Temp:<span id="fTemp4"></span></p>
+                                <p>Humidity:<span id="fHumidity4"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-4 d-flex flex-column rounded text-light ">
+                    <!--Here we create an HTML form for handling the inputs-->
+                    <h4 class="pt-1"><strong>Search for a City:</strong></h4>
+                    <!--Here we create the text box for capturing the search city Name-->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bg-transparent"id="search-city" aria-label="City Search" aria-describedby="search-button" placeholder="EX-Mumbai,MH,IN">
+                        <div class="input-group-append">
+                            <button class=" btn text-light" id="search-button" style="background-color: #00000036;"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <!--section for search city history-->
+                    <button class=" btn btn-primary justify-content-end " type="button" id="clear-history" style="background-color: #00000036;">Clear history</button>
+                    <ul class="list-group">
+    
+                    </ul>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <!--jQuery JS-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <!--Code to Jvascript File-->
+    <script src="script.js"></script>
+</body>
+</html>
