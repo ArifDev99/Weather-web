@@ -87,7 +87,7 @@ function getImage(weather){
     if(weather==="Snow"){
         return "Snow.jpg"
     }
-    return ;
+    return "Default.jpg";
 }
 // Here we create the AJAX call
 function currentWeather(lat,lon){

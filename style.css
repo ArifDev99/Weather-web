@@ -16,6 +16,20 @@ html {
     background: #FF0000;
 }
 
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+}
+
 body {
     
     font-size: 16px;
