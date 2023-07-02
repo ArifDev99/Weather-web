@@ -62,7 +62,34 @@ h3{
 span{
     font-size: 1em;
 }
-li:hover{
-    background-color: lightslategray;
-    text-decoration: underline;
+ul{
+    cursor: pointer;
+}
+.list-group-item{
+    background-color:#d5d3d336;
+}
+.list-group-item:hover{
+    background-color: rgba(46, 46, 46, 0.322);
+}
+
+input[type="text"]{
+    background-color: #d5d3d336;
+}
+
+input[type="text"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(126, 239, 104, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+  background-color: rgba(46, 46, 46, 0.322);
+  outline: 0 none;
+}
+input[type="text"]:hover,
+input[type="color"]:hover,
+.uneditable-input:hover {   
+    border-color: rgba(126, 239, 104, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+    background-color: rgba(46, 46, 46, 0.322);
+  outline: 0 none;
+  cursor: pointer;
 }

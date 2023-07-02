@@ -16,12 +16,12 @@
     <!--Jumbotron for Title-->
     <div id="main">
         <img class="bgimg position-absolute opacity-25" src="./image/Default.jpg" id="Bg_img"  alt="">
-        <div class=" container-fluid text-center p-2 position-relative  text-light mb-3" style="background-color: #00000036;">
+        <div class=" container-fluid text-center p-2 position-relative  text-light mb-2" style="background-color: #00000036;">
             <h1> <strong>Weather Dashboard</strong></h1>
         </div>
         <div class="container position-relative">
             <!--Row for searching a city-->
-            <div class="row border border-light" style="background-color: #d5d3d336;">
+            <div class="row border border-dark rounded " style="background-color: #d5d3d336;">
                 <div class="col-sm-8">
                     <div class="row p-4 rounded">
                         <div class="col-sm-12 d-flex p-0 flex-column text-light" id="current-weather">
@@ -55,31 +55,31 @@
                     <div class="col-sm-12" id ="future-weather">
                         <h3 class="text-light">5-Day Forecast:</h3>
                         <div class="row text-light w-100">
-                            <div class="col-sm-2 border border-light forecast text-white ml-2 mb-3 p-2 mt-2 rounded" style="background-color: #d5d3d336;">
+                            <div class="col-sm-2 border border-dark forecast text-white ml-2 mb-3 p-2 mt-2 rounded" style="background-color: #d5d3d336;">
                                 <p id="fDate0"></p>
                                 <p id="fImg0"></p>
                                 <p>Temp:<span id="fTemp0"></span></p>
                                 <p>Humidity:<span id="fHumidity0"></span></p>
                             </div>
-                            <div class="col-sm-2 border border-light forecast text-white ml-2 mb-3 p-2 mt-2 rounded" style="background-color: #d5d3d336;">
+                            <div class="col-sm-2 border border-dark forecast text-white ml-2 mb-3 p-2 mt-2 rounded" style="background-color: #d5d3d336;">
                                 <p id="fDate1"></p>
                                 <p id="fImg1"></p>
                                 <p>Temp:<span id="fTemp1"></span></p>
                                 <p>Humidity:<span id="fHumidity1"></span></p>
                             </div>
-                            <div class="col-sm-2 border border-light forecast text-white ml-2 mb-3 p-2 mt-2 rounded"style="background-color: #d5d3d336;">
+                            <div class="col-sm-2 border border-dark forecast text-white ml-2 mb-3 p-2 mt-2 rounded"style="background-color: #d5d3d336;">
                                 <p id="fDate2"></p>
                                 <p id="fImg2"></p>
                                 <p>Temp:<span id="fTemp2"></span></p>
                                 <p>Humidity:<span id="fHumidity2"></span></p>
                             </div>
-                            <div class="col-sm-2 border border-light forecast text-white ml-2 mb-3 p-2 mt-2 rounded"style="background-color: #d5d3d336;">
+                            <div class="col-sm-2 border border-dark forecast text-white ml-2 mb-3 p-2 mt-2 rounded"style="background-color: #d5d3d336;">
                                 <p id="fDate3"></p>
                                 <p id="fImg3"></p>
                                 <p>Temp:<span id="fTemp3"></span></p>
                                 <p>Humidity:<span id="fHumidity3"></span></p>
                             </div>
-                            <div class="col-sm-2 border border-light forecast text-white ml-2 mb-3 p-2 mt-2 rounded" style="background-color: #d5d3d336;">
+                            <div class="col-sm-2 border border-dark forecast text-white ml-2 mb-3 p-2 mt-2 rounded" style="background-color: #d5d3d336;">
                                 <p id="fDate4"></p>
                                 <p id="fImg4"></p>
                                 <p>Temp:<span id="fTemp4"></span></p>
@@ -94,13 +94,13 @@
                     <h4 class="pt-1"><strong>Search for a City:</strong></h4>
                     <!--Here we create the text box for capturing the search city Name-->
                     <div class="input-group mb-3 text-light">
-                        <input type="text" class="form-control bg-transparent text-light" id="search-city" aria-label="City Search" aria-describedby="search-button" placeholder="EX-Mumbai,MH,IN">
+                        <input type="text" class="form-control text-light" id="search-city" aria-label="City Search" aria-describedby="search-button" placeholder="EX-Mumbai,MH,IN">
                         <div class="input-group-append">
-                            <button class=" btn text-light" id="search-button" style="background-color: #00000036;"><i class="fa fa-search"></i></button>
+                            <button class=" btn text-light" id="search-button" style="background-color: #00000070"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
                     <!--section for search city history-->
-                    <button class=" btn btn-primary justify-content-end " type="button" id="clear-history" style="background-color: #00000036;">Clear history</button>
+                    <button class=" btn btn-primary justify-content-end " type="button" id="clear-history" style="background-color: #00000070;">Clear history</button>
                     <ul class="list-group">
     
                     </ul>

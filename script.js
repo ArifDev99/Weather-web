@@ -255,9 +255,9 @@ function forecast(cityid){
 //Daynamically add the passed city on the search history
 function addToList(c){
     var listEl= $("<li>"+c.toUpperCase()+"</li>");
-    $(listEl).attr("class","list-group-item  border border-light");
+    $(listEl).attr("class","list-group-item  border border-dark ");
     $(listEl).attr("data-value",c.toUpperCase());
-    $(listEl).attr("style","background-color:#d5d3d336");
+    // $(listEl).attr("style","background-color:#d5d3d336");
     $(".list-group").append(listEl);
 }
 // display the past search again when the list group item is clicked in search history
