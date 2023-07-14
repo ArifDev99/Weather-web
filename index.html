@@ -23,61 +23,66 @@
   </head>
   <body>
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="sidenav-content px-2">
-
-                <h4 class="pt-1"><strong>Search for a City:</strong></h4>
-                <!-- Here we create the text box for capturing the search city Name -->
-                <div class="input-group mb-3 text-light">
-                  <input
-                    type="text"
-                    class="form-control text-light"
-                    id="search-city"
-                    aria-label="City Search"
-                    aria-describedby="search-button"
-                    placeholder="EX-Mumbai,MH,IN"
-                  />
-                  <div class="input-group-append">
-                    <button
-                      class="btn text-light"
-                      id="search-button"
-                      style="background-color: #00000070"
-                    >
-                      <i class="fa fa-search"></i>
-                    </button>
-                  </div>
-                </div>
-                <!--section for search city history-->
-                <button
-                  class="btn btn-primary justify-content-end"
-                  type="button"
-                  id="clear-history"
-                  style="background-color: #00000070"
-                >
-                  Clear history
-                </button>
-                <ul class="list-group"></ul>
-            </div>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <div class="sidenav-content px-2">
+        <h4 class="pt-1"><strong>Search for a City:</strong></h4>
+        <!-- Here we create the text box for capturing the search city Name -->
+        <div class="input-group mb-3 text-light">
+          <input
+            type="text"
+            class="form-control text-light"
+            id="search-city"
+            aria-label="City Search"
+            aria-describedby="search-button"
+            placeholder="EX-Mumbai,MH,IN"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn text-light"
+              id="search-button"
+              style="background-color: #00000070"
+            >
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <!--section for search city history-->
+        <button
+          class="btn btn-primary justify-content-end"
+          type="button"
+          id="clear-history"
+          style="background-color: #00000070"
+        >
+          Clear history
+        </button>
+        <ul class="list-group"></ul>
+      </div>
     </div>
 
-
     <img
-    class="bgimg position-absolute opacity-25"
+      class="bgimg position-absolute opacity-25"
       src="./image/Default.jpg"
       id="Bg_img"
       alt=""
-      />
-    <div class="navbar p-2 text-light mb-2 w-100" style="background-color: #202020">
-        <h1 class="header"><strong>Weather Dashboard</strong></h1>
-        <button type="button" class="btn btn-secondary" onclick="openNav()"><i class="fa fa-search px-1"></i>Search a City</button>
+    />
+    <div
+      class="navbar p-2 text-light w-100"
+      style="background-color: #202020"
+    >
+      <h1 class="header"><strong>Weather Dashboard</strong></h1>
+      <button type="button" class="btn btn-secondary" onclick="openNav()">
+        <i class="fa fa-search px-1"></i>Search a City
+      </button>
     </div>
     <!--Jumbotron for Title-->
     <div id="main">
       <div class="container position-relative">
         <!--Row for searching a city-->
         <div class="row border border-dark rounded" id="hero_row">
-          <div class="col overflow-scroll">
-            <div class="row p-4 rounded">
+          <div class="col">
+            <div class="row p-2 rounded">
               <div
                 class="col-sm-12 d-flex p-0 flex-column text-light"
                 id="current-weather"
@@ -151,26 +156,26 @@
               id="future-weather"
             >
               <h3 class="text-light m-auto">5-Day Forecast</h3>
-              <div class="row text-light w-100 overflow-scroll">
+              <div class="row text-light w-100 overflow-scroll mb-2">
                 <div
-                  class="col border border-dark forecast text-white ml-2 mb-3 p-2 mt-2 rounded"
+                  class="col border border-dark forecast text-white ml-2 p-2 mt-2 rounded"
                   style="background-color: #d5d3d336"
                 >
                   <div
                     class="m-auto flex-column justify-content-center align-items-center"
                   >
-                    <p id="fDate0" class="text-center"></p>
-                    <p id="fImg0" class="text-center"></p>
-                    <p class="text-center">
+                    <p id="fDate0" class="text-center "></p>
+                    <p id="fImg0" class="text-center "></p>
+                    <p class="text-center ">
                       Temp:<span id="fTemp0" class="text-center"></span>
                     </p>
-                    <p class="text-center">
+                    <p class="text-center ">
                       Humidity:<span id="fHumidity0"></span>
                     </p>
                   </div>
                 </div>
                 <div
-                  class="col border border-dark forecast text-white ml-2 mb-3 p-2 mt-2 rounded"
+                  class="col border border-dark forecast text-white ml-2 p-2 mt-2 rounded"
                   style="background-color: #d5d3d336"
                 >
                   <p id="fDate1" class="text-center"></p>
@@ -183,7 +188,7 @@
                   </p>
                 </div>
                 <div
-                  class="col border border-dark forecast text-white ml-2 mb-3 p-2 mt-2 rounded"
+                  class="col border border-dark forecast text-white ml-2 p-2 mt-2 rounded"
                   style="background-color: #d5d3d336"
                 >
                   <p id="fDate2" class="text-center"></p>
@@ -196,7 +201,7 @@
                   </p>
                 </div>
                 <div
-                  class="col border border-dark forecast text-white ml-2 mb-3 p-2 mt-2 rounded"
+                  class="col border border-dark forecast text-white ml-2 p-2 mt-2 rounded"
                   style="background-color: #d5d3d336"
                 >
                   <p id="fDate3" class="text-center"></p>
@@ -209,7 +214,7 @@
                   </p>
                 </div>
                 <div
-                  class="col border border-dark forecast text-white ml-2 mb-3 p-2 mt-2 rounded"
+                  class="col border border-dark forecast text-white ml-2 p-2 mt-2 rounded"
                   style="background-color: #d5d3d336"
                 >
                   <p id="fDate4" class="text-center"></p>
@@ -225,10 +230,10 @@
             </div>
           </div>
           <!-- <div class="col-sm-4 d-flex flex-column rounded text-light"> -->
-            <!-- Here we create an HTML form for handling the inputs -->
-            <!-- <h4 class="pt-1"><strong>Search for a City:</strong></h4> -->
-            <!-- Here we create the text box for capturing the search city Name -->
-            <!-- <div class="input-group mb-3 text-light">
+          <!-- Here we create an HTML form for handling the inputs -->
+          <!-- <h4 class="pt-1"><strong>Search for a City:</strong></h4> -->
+          <!-- Here we create the text box for capturing the search city Name -->
+          <!-- <div class="input-group mb-3 text-light">
               <input
                 type="text"
                 class="form-control text-light"
@@ -247,8 +252,8 @@
                 </button>
               </div>
             </div> -->
-            <!--section for search city history-->
-            <!-- <button
+          <!--section for search city history-->
+          <!-- <button
               class="btn btn-primary justify-content-end"
               type="button"
               id="clear-history"
