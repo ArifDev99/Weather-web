@@ -1,95 +1,198 @@
-
-*{
-    box-sizing: border-box;
-    
+* {
+  box-sizing: border-box;
 }
 html {
-    overflow: scroll;
-    overflow-x: hidden;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
-    width: 0;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-    background: #FF0000;
+  background: #ff0000;
 }
 
-
-.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: black;
-    opacity: 1; /* Firefox */
+.form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
 }
 
-.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: black;
+.form-control:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
 }
 
-.form-control::-ms-input-placeholder { /* Microsoft Edge */
-    color: black;
+.form-control::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: black;
 }
 
 body {
-    
-    font-size: 16px;
-    font-family: 'Signika', sans-serif;
-    overflow: hidden;
-    
+  font-size: 16px;
+  font-family: "Signika", sans-serif;
 }
-#main{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    overflow-y: scroll;
-    background-color: #00000036;
-    position: relative;
-    z-index: 99;
+.navbar {
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
 }
-
-.bgimg{
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-}
-h3{
-    font-weight: bold;
-}
-.forecast{
-    
-    font-size: 0.9em;
-}
-span{
-    font-size: 1em;
-}
-ul{
-    cursor: pointer;
-}
-.list-group-item{
-    background-color:#d5d3d336;
-}
-.list-group-item:hover{
-    background-color: rgba(46, 46, 46, 0.322);
+.navbar .btn {
+  position: absolute;
+  top: 10px;
+  right: 50px;
 }
 
-input[type="text"]{
-    background-color: #d5d3d336;
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  color: #f1f1f1;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidenav .sidenav-content {
+  position: absolute;
+  top: 50px;
+  padding: 0 10px;
+}
+
+#main {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  background-color: #00000036;
+  position: relative;
+  margin-top: 60px;
+  z-index: 0;
+  padding-top: 1rem;
+  overflow-y: hidden;
+  transition: margin-right 0.5s;
+}
+
+#hero_row {
+  background-color: #d5d3d336;
+  z-index: 99;
+}
+
+.bgimg {
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+h3 {
+  font-weight: bold;
+}
+.forecast {
+  font-size: 0.9em;
+}
+span {
+  font-size: 1em;
+}
+ul {
+  cursor: pointer;
+}
+.list-group-item {
+  background-color: #d5d3d336;
+}
+.list-group-item:hover {
+  background-color: rgba(46, 46, 46, 0.322);
+}
+
+input[type="text"] {
+  background-color: #d5d3d336;
 }
 
 input[type="text"]:focus,
 input[type="color"]:focus,
-.uneditable-input:focus {   
+.uneditable-input:focus {
   border-color: rgba(126, 239, 104, 0.8);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0 0 8px rgba(126, 239, 104, 0.6);
   background-color: rgba(46, 46, 46, 0.322);
   outline: 0 none;
 }
 input[type="text"]:hover,
 input[type="color"]:hover,
-.uneditable-input:hover {   
-    border-color: rgba(126, 239, 104, 0.8);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
-    background-color: rgba(46, 46, 46, 0.322);
+.uneditable-input:hover {
+  border-color: rgba(126, 239, 104, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0 0 8px rgba(126, 239, 104, 0.6);
+  background-color: rgba(46, 46, 46, 0.322);
   outline: 0 none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+  .navbar{
+    position: relative;
+  }
+  .navbar .header{
+    position: absolute;
+    top: 30%;
+    left: 20px;
+
+  }
+  .navbar .btn {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    font-size: 14px;
+  }
+  h1{
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 17px;
+  }
+  img {
+    width: 84px;
+    height: 84px;
+  }
+  #main {
+    overflow-y: scroll;
+    margin-top: 5px;
+    padding-top: 5px;
+  }
 }

@@ -111,7 +111,9 @@ function currentWeather(lat,lon){
         var iconurl="https://openweathermap.org/img/wn/"+weathericon +"@2x.png";
         var tempF = (response.main.temp - 273.15) * 1.80 + 32;
         var tempC = (response.main.temp - 273.15) ;
-        $(hero_temperature).html((tempC).toFixed(2)+"&#8451"+"<img src="+iconurl+">");
+        $(hero_temperature).html((tempC).toFixed(2)+"&#8451");
+        $(hero_temperature_icon).attr("src",`${iconurl}`)
+
         // The date format method is taken from the  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
         var date=new Date(response.dt*1000).toLocaleDateString();
         //parse the response for name of city and concanatig the date and icon.
@@ -173,7 +175,9 @@ function lastWeather(city){
         var iconurl="https://openweathermap.org/img/wn/"+weathericon +"@2x.png";
         var tempF = (response.main.temp - 273.15) * 1.80 + 32;
         var tempC = (response.main.temp - 273.15) ;
-        $(hero_temperature).html((tempC).toFixed(2)+"&#8451"+"<img src="+iconurl+">");
+        // $(hero_temperature).html((tempC).toFixed(2)+"&#8451"+"<img src="+iconurl+">");
+        $(hero_temperature).html((tempC).toFixed(2)+"&#8451");
+        $(hero_temperature_icon).attr("src",`${iconurl}`)
         // The date format method is taken from the  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
         var date=new Date(response.dt*1000).toLocaleDateString();
         //parse the response for name of city and concanatig the date and icon.
